@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div id="myDiv">Mouse Over Me</div>
+
+<script>
+// Get the div element
+const divElement = document.getElementById('myDiv');
+
+// Add event listeners for mouse over and mouse out
+divElement.addEventListener('mouseover', function() {
+    this.textContent = "Thank You!";
+});
+
+divElement.addEventListener('mouseout', function() {
+    this.textContent = "Mouse Over Me";
+});
+</script>
+
+</body>
+</html>

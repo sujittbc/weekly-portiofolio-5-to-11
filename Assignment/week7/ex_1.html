@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Our Website</title>
+</head>
+<body>
+
+<form action="search.php" method="GET">
+    <h1>Search Our Website</h1>
+    <hr width="50%" align="left" color="black">
+    <table>
+        <tr>
+            <td>Where do you want to search?</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="search_location" value="whole_site">Whole Site</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="search_location" value="business_partner_section">Business Partner Section</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="search_location" value="corporate_communication_section">Corporate Communication Section</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="search_location" value="lotus_education_section">Lotus Education Section</td>
+        </tr>
+        <tr>
+            <td width="300px">Enter a word or two that you want to search: 
+            <input type="text" name="search_keyword"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

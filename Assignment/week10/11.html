@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Add and Display</title>
+</head>
+<body>
+    <h1>Array Add and Display</h1>
+    <input type="text" id="inputItem" placeholder="Enter item">
+    <button onclick="addItem()">Add</button>
+    <button onclick="displayItems()">Display</button>
+    <div id="result"></div>
+
+    <script>
+        // Create an empty array
+        let arr = [];
+
+        // Function to add an item to the array
+        function addItem() {
+            const inputItem = document.getElementById("inputItem").value.trim();
+            if (inputItem !== "") {
+                arr.push(inputItem);
+                document.getElementById("inputItem").value = ""; // Clear the input field
+            }
+        }
+
+        // Function to display the items in the array
+        function displayItems() {
+            const resultElement = document.getElementById("result");
+            if (arr.length === 0) {
+                resultElement.textContent = "Array is empty";
+            } else {
+                let result = "Array items:\n";
+                arr.forEach((item, index) => {
+                    result += `${index + 1}. ${item}\n`;
+                });
+                resultElement.textContent = result;
+            }
+        }
+    </script>
+</body>
+</html>
